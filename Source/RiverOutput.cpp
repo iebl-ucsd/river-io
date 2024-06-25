@@ -37,24 +37,28 @@ RiverOutput::RiverOutput()
     addStringParameter(
             Parameter::ParameterScope::GLOBAL_SCOPE,
             "stream_name",
+            "Stream Name",
             "River stream name",
             "",
             true);
     addStringParameter(
             Parameter::ParameterScope::GLOBAL_SCOPE,
             "redis_connection_hostname",
+            "Redis connection hostname",
             "Hostname, Redis connection",
             "127.0.0.1",
             true);
     addStringParameter(
             Parameter::ParameterScope::GLOBAL_SCOPE,
             "redis_connection_password",
+            "Redis connection password",
             "Password, Redis connection",
             "",
             true);
     addIntParameter(
             Parameter::ParameterScope::GLOBAL_SCOPE,
             "redis_connection_port",
+            "Redis connection port",
             "Hostname, Redis port",
             6379,
             0,
@@ -63,6 +67,7 @@ RiverOutput::RiverOutput()
     addIntParameter(
             Parameter::ParameterScope::GLOBAL_SCOPE,
             "max_latency_ms",
+            "Max latency (ms) for sending each batch",
             "Max latency for sending each batch (in ms)",
             5,
             0,
@@ -71,6 +76,7 @@ RiverOutput::RiverOutput()
     addIntParameter(
             Parameter::ParameterScope::GLOBAL_SCOPE,
             "datastream_id",
+            "Datastream ID",
             "ID of the datastream to listen to events on",
             0,
             0,

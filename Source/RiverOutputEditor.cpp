@@ -25,7 +25,7 @@
 #include "SchemaListBox.h"
 
 RiverOutputEditor::RiverOutputEditor(GenericProcessor *parentNode)
-        : VisualizerEditor(parentNode, "River Output", 220) {
+        : VisualizerEditor(parentNode, "River Output", 220), isPlaying(false) {
 
     hostnameLabel = newStaticLabel("Hostname", 10, 25, 80, 20);
     hostnameLabelValue = newInputLabel("hostnameLabelValue", "Set the hostname for River", 15, 42, 80, 18);
@@ -387,9 +387,11 @@ void RiverOutputCanvas::refresh()
 }
 
 void RiverOutputCanvas::beginAnimation() {
+    editor->isPlaying = true;
     startCallbacks();
 }
 void RiverOutputCanvas::endAnimation() {
+    editor->isPlaying = false;
     stopCallbacks();
 }
 

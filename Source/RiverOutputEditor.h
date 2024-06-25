@@ -74,6 +74,8 @@ public:
 
     void updateProcessorSchema();
 
+    bool isPlaying;
+
 private:
     ImageIcon* icon;
 
@@ -202,7 +204,7 @@ public:
     void refreshState() override { }
 
     /** Not used */
-    void update() override { }
+    //void update() override { }
 
     /** Updates labels in editor */
     void refresh() override;
